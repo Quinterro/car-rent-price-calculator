@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Koszty wypożyczenia</title>
+  </head>
+
+  <body>
+    <h1>Przeliczenie kosztów za wypożyczenie samochodu</h1>
+    <form id="form">
+      <div>
+        <label for="distance">Przejechane kilometry:</label>
+        <input type="number" id="distance" name="distance" />
+        km
+      </div>
+
+      <div>
+        <label for="yearDriversLicense">Rok otrzymania prawa jazdy:</label>
+        <input
+          type="number"
+          id="yearDriversLicense"
+          name="yearDriversLicense"
+        />
+      </div>
+
+      <div>
+        <label for="loan">Termin wypożyczenia samochodu:</label>
+      </div>
+
+      <div>
+        od
+        <input type="date" id="start" name="start" />
+      </div>
+
+      <div>
+        do
+        <input type="date" id="stop" name="stop" />
+      </div>
+
+      <div id="oilPrice"></div>
+      <div id="onlyLoan"></div>
+      <div id="priceNetto"></div>
+      <div id="priceBrutto"></div>
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+      <script type="text/javascript" src="script.js"></script>
+
+      <input type="submit" value="Przelicz" />
+    </form>
+  </body>
+</html>
