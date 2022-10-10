@@ -130,21 +130,35 @@ document.getElementById("form").addEventListener("submit", (e) => {
 
   document.getElementById(
     "oilPrice"
-  ).innerHTML = `Szacunkowa cena za paliwo: ${oilCost.toFixed(2)} zł`;
+  ).innerHTML = `Szacunkowa cena za paliwo: ${new Intl.NumberFormat("pl-PL", {
+    style: "currency",
+    currency: "PLN",
+  }).format(oilCost)}`;
 
   document.getElementById(
     "onlyLoan"
-  ).innerHTML = `Cena za samo wypożyczenie: ${loanPrice.toFixed(2)} zł`;
+  ).innerHTML = `Cena za samo wypożyczenie: ${new Intl.NumberFormat("pl-PL", {
+    style: "currency",
+    currency: "PLN",
+  }).format(loanPrice)}`;
 
   document.getElementById(
     "priceNetto"
-  ).innerHTML = `Cena netto za całe wypożyczenie: ${wholeLoanPrice.toFixed(
-    2
-  )} zł`;
+  ).innerHTML = `Cena netto za całe wypożyczenie: ${new Intl.NumberFormat(
+    "pl-PL",
+    {
+      style: "currency",
+      currency: "PLN",
+    }
+  ).format(wholeLoanPrice)}`;
 
   document.getElementById(
     "priceBrutto"
-  ).innerHTML = `Cena brutto za całe wypożyczenie: ${priceBrutto.toFixed(
-    2
-  )} zł`;
+  ).innerHTML = `Cena brutto za całe wypożyczenie: ${new Intl.NumberFormat(
+    "pl-PL",
+    {
+      style: "currency",
+      currency: "PLN",
+    }
+  ).format(priceBrutto)}`;
 });
